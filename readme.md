@@ -1,10 +1,6 @@
 WORDPRESS PLUGIN - BE MODEL AND SHORTCODE WITH CACHE
 ============================================
-A WordPress caching plugin made for themes developers.
-
-The exposed methods have to be integreated with the theme source code.
-
-An helper for creating efficient themes and largely improving the user experience.
+A WordPress plugin to transform theme views into cachable shortcodes.
 
 Usage
 ====================
