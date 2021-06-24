@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 ini_set('xdebug.remote_enable', '0');
 
@@ -367,5 +368,4 @@ final class BeModelCacheHelperTest extends TestCase
         )
             ->setMethods(null);
     }
-
 }

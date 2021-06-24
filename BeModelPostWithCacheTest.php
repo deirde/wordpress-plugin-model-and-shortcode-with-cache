@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 ini_set('xdebug.remote_enable', '0');
 
@@ -55,11 +56,13 @@ final class §BeModelPostWithCacheTest extends TestCase
             );
         $mock->expects($this->exactly(3))->method('deleteCacheInstance')
             ->withConsecutive(
-                [$this->MockBeModelCacheHelper::CACHE_FRAGMENT_POST], ['A'],
+                [$this->MockBeModelCacheHelper::CACHE_FRAGMENT_POST],
+                ['A'],
                 ['B']
             );
         $mock->expects($this->exactly(2))->method('getPosts')->withConsecutive(
-            [[]], [[]]
+            [[]],
+            [[]]
         );
         $mock->handleUpdatePost();
     }
@@ -151,5 +154,4 @@ final class §BeModelPostWithCacheTest extends TestCase
             )
             ->setMethods(null);
     }
-
 }

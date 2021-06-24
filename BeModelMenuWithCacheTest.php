@@ -130,5 +130,3 @@ final class §BeModelMenuWithCacheTest extends TestCase
     }
 
 }
-
-?>

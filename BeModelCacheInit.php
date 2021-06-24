@@ -53,5 +53,3 @@ namespace webforyou\be\modelWithCache {
     }
 
 }
-
-?>

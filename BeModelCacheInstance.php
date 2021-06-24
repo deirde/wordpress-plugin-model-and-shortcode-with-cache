@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace webforyou\be\modelWithCache {
@@ -92,10 +93,8 @@ namespace webforyou\be\modelWithCache {
         public static function getInstance(): object
         {
             self::$instance == null
-            && self::$instance = new BeModelCacheInstance();
+                && self::$instance = new BeModelCacheInstance();
             return self::$instance;
         }
-
     }
-
 }

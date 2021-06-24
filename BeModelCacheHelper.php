@@ -19,6 +19,7 @@ namespace webforyou\be\modelWithCache {
         const CACHE_FRAGMENT_MENU = 'bmsCacheFragmentMenu';
         const CACHE_FRAGMENT_POST = 'bmsCacheFragmentPost';
         const CACHE_FRAGMENT_SHORT_CODE = 'bmsCacheFragmentShortCode';
+        const CACHE_FRAGMENT_REST = 'bmsCacheFragmentRest';
         const THEME_SHORT_CODES_DIR = 'shortcode';
         const PARAM_TTL = 'ttl';
         const PARAM_LAZY_LOAD = 'lazyLoad';
@@ -244,7 +245,10 @@ namespace webforyou\be\modelWithCache {
          *
          * @return array|null
          */
-        public function getCacheInstance(object $cacheInstance, string $name): ?array{return $cacheInstance->get($name);}
+        public function getCacheInstance(object $cacheInstance, string $name): ?array
+        {
+            return $cacheInstance->get($name);
+        }
 
         /**
          * @param  object  $cacheInstance

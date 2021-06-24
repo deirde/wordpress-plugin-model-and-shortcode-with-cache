@@ -1,9 +1,10 @@
 <?php
+
 /**
  * Plugin Name: BeModelAndShortCodeWithCache
  * Plugin URI: @TODO
  * Description: @TODO
- * Version: 0.1
+ * Version: 0.2
  * Author: Davide Longo
  * Author URI: http://www.davidelongo.net/
  */
@@ -34,25 +35,31 @@ $BeModelCacheInstance
 require_once('BeModelCacheInit.php');
 register_activation_hook(
     __FILE__,
-    array('webforyou\be\modelWithCache\BeModelCacheInit',
-          'BeModelCacheInitActivation')
+    array(
+        'webforyou\be\modelWithCache\BeModelCacheInit',
+        'BeModelCacheInitActivation'
+    )
 );
 register_deactivation_hook(
     __FILE__,
-    array('webforyou\be\modelWithCache\BeModelCacheInit',
-          'BeModelCacheInitDeactivation')
+    array(
+        'webforyou\be\modelWithCache\BeModelCacheInit',
+        'BeModelCacheInitDeactivation'
+    )
 );
 register_uninstall_hook(
     __FILE__,
-    array('webforyou\be\modelWithCache\BeModelCacheInit',
-          'BeModelCacheInitDeactivation')
+    array(
+        'webforyou\be\modelWithCache\BeModelCacheInit',
+        'BeModelCacheInitDeactivation'
+    )
 );
 
 /**
  * Class BeModelMenuWithCache
  */
 require_once('BeModelMenuWithCache.php');
-$BeModelMenuWithCache = New webforyou\be\modelWithCache\BeModelMenuWithCache(
+$BeModelMenuWithCache = new webforyou\be\modelWithCache\BeModelMenuWithCache(
     $BeModelCacheInstance,
     $BeModelCacheHelper
 );
@@ -61,7 +68,7 @@ $BeModelMenuWithCache = New webforyou\be\modelWithCache\BeModelMenuWithCache(
  * Class BeModelPostWithCache
  */
 require_once('BeModelPostWithCache.php');
-$BeModelPostWithCache = New webforyou\be\modelWithCache\BeModelPostWithCache(
+$BeModelPostWithCache = new webforyou\be\modelWithCache\BeModelPostWithCache(
     $BeModelCacheInstance,
     $BeModelCacheHelper
 );
@@ -70,7 +77,16 @@ $BeModelPostWithCache = New webforyou\be\modelWithCache\BeModelPostWithCache(
  * Class BeShortCodeWithCache
  */
 require_once('BeShortCodeWithCache.php');
-$BeShortCodeWithCache = New webforyou\be\modelWithCache\BeShortCodeWithCache(
+$BeShortCodeWithCache = new webforyou\be\modelWithCache\BeShortCodeWithCache(
+    $BeModelCacheInstance,
+    $BeModelCacheHelper
+);
+
+/**
+ * Class BeModelCacheRest
+ */
+require_once('BeRestWithCache.php');
+$BeRestWithCache = new webforyou\be\modelWithCache\BeRestWithCache(
     $BeModelCacheInstance,
     $BeModelCacheHelper
 );

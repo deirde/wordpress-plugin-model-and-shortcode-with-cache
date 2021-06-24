@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 ini_set('xdebug.remote_enable', '0');
 
@@ -264,5 +265,4 @@ final class BeShortCodeWithCacheTest extends TestCase
             )
             ->setMethods(null);
     }
-
 }

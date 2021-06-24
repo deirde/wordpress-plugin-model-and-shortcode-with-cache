@@ -138,10 +138,8 @@ namespace webforyou\be\modelWithCache {
             $this->isTemplateChanged($params);
             $response = $this->getCacheInstance($key);
             if (
-                (
-                    !isset($this->params[$this->cacheHelper::PARAM_TTL])
-                    || !$this->params[$this->cacheHelper::PARAM_TTL]
-                )
+                (!isset($this->params[$this->cacheHelper::PARAM_TTL])
+                    || !$this->params[$this->cacheHelper::PARAM_TTL])
                 || !$this->params[$this->cacheHelper::CACHE_FRAGMENT_POST]
                 || !$response
             ) {
